@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+  * li {
+    list-style: none; }
+  * a {
+    text-decoration: none; }
+
+body {
+  background-color: #07090B;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
+  overflow-x: hidden; }
+
+nav {
+  display: block;
+  width: 100%;
+  height: 80px; }
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: transparent; }
+  .navbar .logo {
+    padding: 25px;
+    width: 250px;
+    cursor: pointer; }
+  .navbar .choices {
+    display: flex;
+    padding: 20px; }
+    .navbar .choices li {
+      padding: 20px;
+      font-size: 18px; }
+      .navbar .choices li a {
+        display: inline-block;
+        color: #F2F2F2; }
+        .navbar .choices li a::after {
+          display: block;
+          content: "";
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: #E50914;
+          transition: width .3s ease-in-out; }
+        .navbar .choices li a:hover:after, .navbar .choices li a:focus::after {
+          width: 100%; }
+  .navbar .search {
+    display: flex;
+    position: relative;
+    width: 350px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #F2F2F2; }
+    .navbar .search img {
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 50px; }
+    .navbar .search input {
+      font-size: 16px;
+      font-weight: 300;
+      color: #F2F2F2;
+      width: 100%;
+      height: 35px;
+      background-color: transparent;
+      border-color: #F2F2F2;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      padding-left: 60px; }
+      .navbar .search input:focus {
+        outline: none; }
+  .navbar .right-side {
+    display: flex;
+    align-items: center; }
+    .navbar .right-side .bell-ul, .navbar .right-side .together-ul {
+      align-items: center;
+      display: block;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin: 20px;
+      color: #F2F2F2; }
+      .navbar .right-side .bell-ul:hover li, .navbar .right-side .together-ul:hover li {
+        display: flex; }
+      .navbar .right-side .bell-ul .bell, .navbar .right-side .together-ul .bell {
+        width: 50px;
+        height: 50px; }
+      .navbar .right-side .bell-ul li, .navbar .right-side .together-ul li {
+        padding: 10px 10px 10px 0;
+        border-bottom: 1px solid #F2F2F2;
+        display: none;
+        position: relative;
+        width: 430px;
+        height: 120px;
+        right: 380px;
+        background-color: #87878792;
+        text-align: center;
+        align-items: center;
+        transition: .4s; }
+        .navbar .right-side .bell-ul li:hover, .navbar .right-side .together-ul li:hover {
+          background-color: #07090B; }
+        .navbar .right-side .bell-ul li img, .navbar .right-side .together-ul li img {
+          width: 40%;
+          padding: 10px;
+          margin: 10px;
+          border-radius: 20px; }
+        .navbar .right-side .bell-ul li .li-right, .navbar .right-side .together-ul li .li-right {
+          width: 60%;
+          align-items: center;
+          text-align: left;
+          justify-content: center; }
+          .navbar .right-side .bell-ul li .li-right h3, .navbar .right-side .together-ul li .li-right h3 {
+            font-size: 23px;
+            font-weight: 500; }
+          .navbar .right-side .bell-ul li .li-right h5, .navbar .right-side .together-ul li .li-right h5 {
+            padding-top: 10px;
+            font-weight: 100; }
+    .navbar .right-side .profile-ul {
+      align-items: center;
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 20px; }
+      .navbar .right-side .profile-ul:hover li {
+        display: flex; }
+      .navbar .right-side .profile-ul .profile {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px; }
+      .navbar .right-side .profile-ul .li-upper {
+        background-color: #ff00009c;
+        padding: 10px;
+        display: none;
+        width: 275px;
+        height: 70px;
+        right: 225px;
+        position: relative;
+        align-items: center; }
+        .navbar .right-side .profile-ul .li-upper img {
+          width: 55px;
+          height: 55px;
+          border-radius: 10px; }
+        .navbar .right-side .profile-ul .li-upper a {
+          margin: 20px 20px 20px 10px;
+          font-size: 16px;
+          width: 55%;
+          color: #F2F2F2; }
+          .navbar .right-side .profile-ul .li-upper a:hover {
+            text-decoration: underline; }
+        .navbar .right-side .profile-ul .li-upper span {
+          font-size: 25px;
+          color: #929292; }
+      .navbar .right-side .profile-ul .li-lower {
+        background-color: #ff00009c;
+        padding: 10px;
+        position: relative;
+        align-items: center;
+        display: none;
+        width: 275px;
+        height: 40px;
+        right: 225px; }
+        .navbar .right-side .profile-ul .li-lower span {
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          font-size: 27px;
+          color: #929292; }
+        .navbar .right-side .profile-ul .li-lower a {
+          color: #F2F2F2;
+          margin-left: 15px;
+          width: 80%; }
+          .navbar .right-side .profile-ul .li-lower a:hover {
+            text-decoration: underline; }
+      .navbar .right-side .profile-ul li:nth-child(5) {
+        border-bottom: 2px solid #929292; }
+      .navbar .right-side .profile-ul .last {
+        border-top: 1px solid #929292;
+        text-align: center;
+        padding: 30px; }
+    .navbar .right-side .together-ul .together {
+      width: 50px;
+      height: 55px; }
+    .navbar .right-side .together-ul li {
+      padding: 10px;
+      width: 300px;
+      height: 70px;
+      right: 250px;
+      background-color: #87878792;
+      transition: .4s;
+      color: #F2F2F2; }
+      .navbar .right-side .together-ul li:nth-child(3) {
+        cursor: default; }
+      .navbar .right-side .together-ul li:nth-child(4) {
+        cursor: pointer; }
+      .navbar .right-side .together-ul li:hover {
+        background-color: #07090B; }
+      .navbar .right-side .together-ul li img {
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        margin-left: -5px;
+        border-radius: 20px;
+        cursor: pointer; }
+        .navbar .right-side .together-ul li img:nth-child(2) {
+          margin-left: 10px; }
+    .navbar .right-side .together-ul .first {
+      justify-content: center;
+      font-size: 20px;
+      cursor: default; }
+      .navbar .right-side .together-ul .first span {
+        font-size: 25px;
+        padding: 0px 10px 0px 10px; }
+
+.hero {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(7, 9, 11, 0) 0%, #07090b 65%), url("https://images3.alphacoders.com/853/853864.jpg");
+  background-size: 103% 100vh; }
+  .hero img {
+    position: absolute;
+    width: 600px;
+    height: 250px;
+    top: 20%; }
+  .hero .buttons {
+    display: flex;
+    position: relative;
+    width: 20%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 50%; }
+    .hero .buttons button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      width: 80px;
+      height: 50px;
+      margin: 10px;
+      font-size: 18px;
+      font-weight: 100;
+      background-color: transparent;
+      color: #F2F2F2;
+      cursor: pointer;
+      border: 1px dashed #F2F2F2;
+      border-radius: 40px;
+      transition: background-color .5s; }
+      .hero .buttons button:hover, .hero .buttons button:focus {
+        background-color: #e5091466;
+        border: 1px dashed #F2F2F2; }
+
+.episode-dom {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  margin-top: -10px;
+  background-color: #07090B;
+  padding: 0px 50px 0 50px;
+  color: #F2F2F2;
+  overflow-y: scroll; }
+  .episode-dom::-webkit-scrollbar {
+    display: block; }
+  .episode-dom::-webkit-scrollbar-thumb {
+    background-color: #e5091459;
+    border-radius: 10px; }
+    .episode-dom::-webkit-scrollbar-thumb:hover {
+      background-color: #6d0000; }
+  .episode-dom::-webkit-scrollbar-track {
+    color: #096dd1; }
+  .episode-dom .seasons {
+    width: 13%;
+    height: 150px;
+    position: fixed;
+    align-self: flex-start; }
+    .episode-dom .seasons .season {
+      width: 100%;
+      height: 75px; }
+      .episode-dom .seasons .season button {
+        padding: 10px;
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background: transparent;
+        color: #F2F2F2;
+        border: none;
+        transition: background-color .6s; }
+        .episode-dom .seasons .season button:hover, .episode-dom .seasons .season button:focus {
+          background-color: #E50914; }
+        .episode-dom .seasons .season button h4 {
+          font-size: 19px;
+          font-weight: 500; }
+        .episode-dom .seasons .season button h5 {
+          font-size: 14px;
+          font-weight: 100; }
+      .episode-dom .seasons .season #b1 {
+        border-top-right-radius: 10px; }
+      .episode-dom .seasons .season #b2 {
+        border-bottom-right-radius: 10px; }
+  .episode-dom .episodes, .episode-dom .episodes2 {
+    display: block;
+    position: sticky;
+    left: 15%;
+    width: 85%;
+    padding: 20px;
+    color: #F2F2F2;
+    transition: .5s; }
+    .episode-dom .episodes .title, .episode-dom .episodes2 .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 30px; }
+      .episode-dom .episodes .title h3, .episode-dom .episodes2 .title h3 {
+        font-size: 28px;
+        font-weight: 500; }
+      .episode-dom .episodes .title a, .episode-dom .episodes2 .title a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition: color .4s;
+        color: #F2F2F2; }
+        .episode-dom .episodes .title a span, .episode-dom .episodes2 .title a span {
+          font-size: 35px;
+          padding-right: 5px; }
+        .episode-dom .episodes .title a:hover, .episode-dom .episodes2 .title a:hover {
+          color: #E50914; }
+    .episode-dom .episodes .explanation, .episode-dom .episodes2 .explanation {
+      margin-top: 20px;
+      font-size: 17px; }
+    .episode-dom .episodes .episode, .episode-dom .episodes2 .episode {
+      display: flex;
+      width: 100%;
+      height: 280px;
+      margin-top: 20px; }
+      .episode-dom .episodes .episode .left, .episode-dom .episodes2 .episode .left {
+        width: 30%;
+        position: relative;
+        letter-spacing: 1px; }
+        .episode-dom .episodes .episode .left img, .episode-dom .episodes2 .episode .left img {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          cursor: pointer; }
+        .episode-dom .episodes .episode .left h3, .episode-dom .episodes2 .episode .left h3 {
+          padding: 15px;
+          position: absolute;
+          font-size: 23px;
+          font-weight: 600;
+          top: 0; }
+        .episode-dom .episodes .episode .left h4, .episode-dom .episodes2 .episode .left h4 {
+          position: absolute;
+          top: 70%;
+          padding-left: 15px;
+          font-size: 18px;
+          font-weight: 300; }
+        .episode-dom .episodes .episode .left h5, .episode-dom .episodes2 .episode .left h5 {
+          position: absolute;
+          top: 80%;
+          font-size: 16px;
+          font-weight: 300;
+          padding-left: 15px; }
+      .episode-dom .episodes .episode .right, .episode-dom .episodes2 .episode .right {
+        width: 70%;
+        height: 100%; }
+        .episode-dom .episodes .episode .right .share, .episode-dom .episodes2 .episode .right .share {
+          display: flex;
+          position: sticky;
+          justify-content: flex-end;
+          padding: 5px;
+          height: 25px; }
+          .episode-dom .episodes .episode .right .share button, .episode-dom .episodes2 .episode .right .share button {
+            background-color: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer; }
+            .episode-dom .episodes .episode .right .share button img, .episode-dom .episodes2 .episode .right .share button img {
+              width: 100%;
+              height: 100%; }
+        .episode-dom .episodes .episode .right p, .episode-dom .episodes2 .episode .right p {
+          padding: 20px;
+          font-size: 21px;
+          font-weight: 300; }
+        .episode-dom .episodes .episode .right h4, .episode-dom .episodes2 .episode .right h4 {
+          margin: 30px 0 10px 20px;
+          font-size: 17px;
+          font-weight: 100;
+          width: 100%;
+          height: 17px; }
+        .episode-dom .episodes .episode .right .profiles, .episode-dom .episodes2 .episode .right .profiles {
+          display: flex;
+          position: sticky;
+          align-items: center;
+          padding: 30px;
+          width: 100%; }
+          .episode-dom .episodes .episode .right .profiles img, .episode-dom .episodes2 .episode .right .profiles img {
+            width: 40px;
+            height: 40px;
+            margin: -5px; }
+          .episode-dom .episodes .episode .right .profiles p, .episode-dom .episodes2 .episode .right .profiles p {
+            font-size: 18px; }
+  .episode-dom .episodes2 {
+    display: none; }
+
+.background-opacity {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 11;
+  opacity: .80; }
+
+.videoBox {
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  max-width: 1200px;
+  max-height: 360px;
+  z-index: 12;
+  overflow: visible; }
+  .videoBox .boxclose {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    background: #222222;
+    font-size: 30px;
+    padding: 0 10px 7px 10px;
+    border-bottom-left-radius: 5px;
+    z-index: 12;
+    opacity: 0.9;
+    cursor: pointer; }
+    .videoBox .boxclose:before {
+      content: "x"; }
+
+/*# sourceMappingURL=style.css.map */

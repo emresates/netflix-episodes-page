@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <img src="imgs/logo.png" alt="" class="logo">
+            <ul class="choices">
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">New & Popular</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Soon</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+
+            <div class="search">
+                <img src="imgs/search.png" alt="">
+                <input type="text" placeholder="Titles, People, Genres" required>
+            </div>
+
+            <div class="right-side">
+                <ul class="bell-ul">
+                    <img class="bell" src="imgs/bell.png" alt="">
+                    <li>
+                        <img src="https://images8.alphacoders.com/691/691835.jpg" alt="">
+                        <div class="li-right">
+                            <h3>New Arrival</h3>
+                            <h3>Vikings</h3>
+                            <h5>Today</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://images.alphacoders.com/126/1260417.jpg" alt="">
+                        <div class="li-right">
+                            <h3>New Arrival</h3>
+                            <h3>The Witcher</h3>
+                            <h5>3 Days Ago</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://images2.alphacoders.com/642/642540.png" alt="">
+                        <div class="li-right">
+                            <h3>New Arrival</h3>
+                            <h3>Rick and Morty</h3>
+                            <h5>6 Days Ago</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://images8.alphacoders.com/543/543961.jpg" alt="">
+                        <div class="li-right">
+                            <h3>New Arrival</h3>
+                            <h3>F.R.I.E.N.D.S</h3>
+                            <h5>2 WeekS Ago</h5>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="profile-ul">
+                    <img class="profile" src="imgs/profile.png" alt="">
+                    <li class="li-upper">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <a href="#">Innocent Witch</a>
+                        <span>&#9763;</span>
+                    </li>
+                    <li class="li-upper">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <a href="#">Peter Boy</a>
+                        <span>&#9763;</span>
+                    </li>
+                    <li class="li-upper">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <a href="#">Philanthropist</a>
+                        <span>&#9763;</span>
+                    </li>
+                    <li class="li-upper">
+                        <img src="imgs/profile3.jpg" alt="">
+                        <a href="#">Strongest Avenger</a>
+                        <span>&#9763;</span>
+                    </li>
+                    <li class="li-lower">
+                        <span>&#9998;</span>
+                        <a href="#">Manage Profiles</a>
+                    </li>
+                    <li class="li-lower">
+                        <span>&#10008;</span>
+                        <a href="#">Exit Profile</a>
+                    </li>
+                    <li class="li-lower">
+                        <span>&#9755;</span>
+                        <a href="#">Account</a>
+                    </li>
+                    <li class="li-lower">
+                        <span>&#9743;</span>
+                        <a href="#">Help Center</a>
+                    </li>
+                    <li class="li-lower last">
+                        <a href="#">Sign out of Netflix</a>
+                    </li>
+                </ul>
+
+                <ul class="together-ul">
+                    <img class="together" src="imgs/friends.png" alt="">
+                    <li class="first"><span>&#9886;</span> Watch Party <span>&#9887;</span></li>
+                    <li>
+                        <span>Family: </span>
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <img src="imgs/profile3.jpg" alt="">
+                    </li>
+                    <li>
+                        <span>Online: </span>
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/prof2.jpg" alt="">
+                        <img src="imgs/prof3.jpg" alt="">
+                        <img src="imgs/prof4.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <img src="imgs/logo2.png" alt="">
+        <div class="buttons">
+            <button>Play</button>
+            <button id="myList">My List</button>
+        </div>
+    </div>
+
+    <!-- Video Section Start-->
+    <div class="videoBox">
+        <a class="boxclose" onclick="videoBox_close();"></a>
+        <video id="video" width="1200" controls>
+            <source src="trailer.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="background-opacity" onClick="videoBox_close();"></div>
+    <!-- Video Section End -->
+
+    <div class="episode-dom">
+        <div class="seasons">
+            <div class="season" id="s1">
+                <button id="b1">
+                    <h4>Season 1</h4>
+                    <h5>2019</h5>
+                </button>
+            </div>
+            <div class="season" id="s2">
+                <button id="b2">
+                    <h4>Season 2</h4>
+                    <h5>2021</h5>
+                </button>
+            </div>
+        </div>
+
+        <div class="episodes">
+            <div class="title">
+                <h3>Season 1</h3>
+                <a onclick="videoBox_open()"><span>&#9863;</span>Watch Trailer</a>
+            </div>
+            <div class="explanation">
+                Sherlock is a British mystery crime drama television series based on Sir Arthur Conan Doyle's Sherlock
+                Holmes detective stories. Created by Steven Moffat and Mark Gatiss, it stars Benedict Cumberbatch as
+                Sherlock Holmes and Martin Freeman as Doctor John Watson.
+            </div>
+
+            <!-- Episode 0 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOTU5ZmQ3NDktNWMwMS00MDE4LTk2NDgtYjg4MmVmZTFjNTBiXkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_FMjpg_UX1024_.jpg"
+                        alt="">
+                    <h3>Unaired Pilot</h3>
+                    <h4>Episode 0</h4>
+                    <h5>55 min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Invalided home from the war in Afghanistan, Dr. John Watson becomes roommates with the world's
+                        only "consulting detective," Sherlock Holmes. Within a day their friendship is forged and
+                        several murders are solved.
+                    </p>
+
+                    <h4>18 Jul 2010</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/prof2.jpg" alt="">
+                        <img src="imgs/prof3.jpg" alt="">
+                        <img src="imgs/prof4.jpg" alt="">
+                        <img src="imgs/profile3.jpg" alt="">
+                        <p>Strongest Avenger and 7 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Episode 1 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOGEyNjkxYjctNGNiNC00Yzk0LTk2OGYtNGY1NzcyYmFiMmUzXkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_FMjpg_UX1024_.jpg"
+                        alt="">
+                    <h3>A Study in Pink</h3>
+                    <h4>Episode 1</h4>
+                    <h5>1h 28min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>War vet Dr. John Watson returns to London in need of a place to stay. He meets Sherlock Holmes, a
+                        consulting detective, and the two soon find themselves digging into a string of serial
+                        "suicides."
+                    </p>
+
+                    <h4>25 Jul 2010</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/prof2.jpg" alt="">
+                        <img src="imgs/prof3.jpg" alt="">
+                        <img src="imgs/prof4.jpg" alt="">
+                        <img src="imgs/profile3.jpg" alt="">
+                        <p>Strongest Avenger and 7 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Episode 2 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTIxMzZhYTktZDFkOC00Yjc0LThlZDQtNzM5YjRiNzVjZWViL2ltYWdlXkEyXkFqcGdeQXVyNTAzOTQ2ODU@._V1_FMjpg_UX1024_.jpg"
+                        alt="">
+                    <h3>The Blind Banker</h3>
+                    <h4>Episode 2</h4>
+                    <h5>1h 29min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Mysterious symbols and murders are showing up all over London, leading Sherlock and John to a
+                        secret Chinese crime syndicate called Black Lotus.
+                    </p>
+
+                    <h4>1 Aug 2010</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/prof2.jpg" alt="">
+                        <img src="imgs/prof3.jpg" alt="">
+                        <img src="imgs/prof4.jpg" alt="">
+                        <img src="imgs/profile3.jpg" alt="">
+                        <p>Strongest Avenger and 7 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Episode 3 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTliZmNmYzAtM2NkNi00ODljLThmMmEtYzk1OTIzMTcyY2I5XkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_FMjpg_UX1024_.jpg"
+                        alt="">
+                    <h3>The Great Game</h3>
+                    <h4>Episode 3</h4>
+                    <h5>1h 29min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Mycroft needs Sherlock's help, but a remorseless criminal mastermind puts Sherlock on a
+                        distracting crime-solving spree via a series of hostage human bombs through which he speaks.
+                    </p>
+
+                    <h4>8 Aug 2010</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/prof2.jpg" alt="">
+                        <img src="imgs/prof3.jpg" alt="">
+                        <img src="imgs/prof4.jpg" alt="">
+                        <img src="imgs/profile3.jpg" alt="">
+                        <p>Strongest Avenger and 7 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="episodes2">
+            <div class="title">
+                <h3>Season 2</h3>
+                <a onclick="videoBox_open()"><span>&#9863;</span> Watch Trailer</a>
+            </div>
+            <div class="explanation">
+                Sherlock is a British mystery crime drama television series based on Sir Arthur Conan Doyle's Sherlock
+                Holmes detective stories. Created by Steven Moffat and Mark Gatiss, it stars Benedict Cumberbatch as
+                Sherlock Holmes and Martin Freeman as Doctor John
+                Watson.
+            </div>
+
+            <!-- Episode 1 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzFhMTQ4YzgtM2ZlOS00MTMxLWExZjItMDc1Y2Y4MDIwYWUyXkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_FMjpg_UX1024_.jpg"
+                        alt="">
+                    <h3>A Scandal in Belgravia</h3>
+                    <h4>Episode 1</h4>
+                    <h5>1h 29min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Sherlock must confiscate something of importance from a mysterious woman named Irene Adler.
+                    </p>
+
+                    <h4>1 Jan 2012</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/prof2.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <p>Philanthropist and 4 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Episode 2 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDc3NzY3Njk0Ml5BMl5BanBnXkFtZTcwNTYzMzU3Nw@@._V1_FMjpg_UX1024_.jpg"
+                        alt="">
+                    <h3>The Hounds of Baskerville</h3>
+                    <h4>Episode 2</h4>
+                    <h5>1h 28min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Sherlock and John investigate the ghosts of a young man who has been seeing monstrous hounds out
+                        in the woods where his father died.
+                    </p>
+
+                    <h4>8 Jan 2012</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <p>Philanthropist and 3 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Episode 3 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDU0OTYzYzctYmYzMi00NzljLWJhODctNWMyZjY1ZGJmYTI1XkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_FMjpg_UX1024_.jpg" alt="">
+                    <h3>The Reichenbach Fall</h3>
+                    <h4>Episode 3</h4>
+                    <h5>1h 28min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Jim Moriarty hatches a mad scheme to turn the whole city against Sherlock.
+                    </p>
+
+                    <h4>15 Jan 2012</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <p>Philanthropist and 3 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Episode 4 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjVlOTJmYzUtNGZmYi00ZWM0LTkxMzQtMjNhOGQ2YTlkZDUyXkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_FMjpg_UX1024_.jpg" alt="">
+                    <h3>The Empty Hearse</h3>
+                    <h4>Episode 4</h4>
+                    <h5>1h 28min</h5>
+                </div>
+
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Mycroft calls Sherlock back to London to investigate an underground terrorist organization.</p>
+
+                    <h4>1 Jan 2014</h4>
+
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile2.jpg" alt="">
+                        <img src="imgs/prof1.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <p>Philanthropist and 3 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Episode 5 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2Y2NDljYzEtZDU5YS00OTM5LWE0NDYtOWM2NDY3ZWEwODY3XkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_FMjpg_UX1024_.jpg" alt="">
+                    <h3>The Sign of Three</h3>
+                    <h4>Episode 5</h4>
+                    <h5>1h 26min</h5>
+                </div>
+    
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Sherlock tries to give the perfect best man speech at John's wedding when he suddenly realizes a murder is about to take place.
+                    </p>
+    
+                    <h4>5 Jan 2014</h4>
+    
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <p>Philanthropist and 1 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Episode 6 -->
+            <div class="episode">
+                <div class="left">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZWMzOTRiZTctNjY3Mi00NDJkLWI4YTQtNjEwN2RhYTE4NmM0XkEyXkFqcGdeQXVyMTIyMzk3NDU1._V1_FMjpg_UX1024_.jpg" alt="">
+                    <h3>His Last Vow</h3>
+                    <h4>Episode 6</h4>
+                    <h5>1h 29min</h5>
+                </div>
+    
+                <div class="right">
+                    <div class="share">
+                        <button><img src="imgs/share.png" alt=""></button>
+                    </div>
+                    <p>Sherlock goes up against Charles Augustus Magnussen, media tycoon and a notorious blackmailer.
+                    </p>
+    
+                    <h4>12 Jan 2014</h4>
+    
+                    <div class="profiles">
+                        <img src="imgs/profile1.jpg" alt="">
+                        <img src="imgs/profile4.jpg" alt="">
+                        <p>Philanthropist and 1 of your friends have seen this episode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
