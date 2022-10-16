@@ -11,3 +11,6 @@
 #### When you click the season buttons, it scrolls the current season screen up and shows the season you clicked. I only added 2 seasons button,but more can be added.
 
 #### You can also see how many family members or friends watched and who watched it under each episode. I added a share button but I didn't write a function for that. 
+
+https://user-images.githubusercontent.com/84937009/196037488-e37d9ee3-e0dd-489d-8ea1-3d54f00070d6.mp4
+
